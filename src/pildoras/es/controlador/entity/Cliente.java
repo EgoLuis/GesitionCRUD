@@ -6,17 +6,8 @@ import javax.persistence.*;
 @Table(name="cliente")
 public class Cliente {
 	
-	
-	
-	
-	
-	public Cliente() {
-		
-	}
+	public Cliente() {}
 
-	
-	
-	
 	public int getId() {
 		return id;
 	}
@@ -49,15 +40,10 @@ public class Cliente {
 		this.email = email;
 	}
 
-	
-
-
 	@Override
 	public String toString() {
 		return "Cliente [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", email=" + email + "]";
 	}
-
-
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)

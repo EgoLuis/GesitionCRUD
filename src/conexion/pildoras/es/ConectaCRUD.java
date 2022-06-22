@@ -33,35 +33,22 @@ public class ConectaCRUD extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-		String jdbcUrl="jdbc:mysql://localhost:3306/gestionpedidoscrud?useSSL=false";
-		
-		String usuario="root";
-		
-		String contra="";
-		
+		String jdbcUrl="jdbc:mysql://localhost:3306/gestionpedidoscrud?useSSL=false";	
+		String usuario="root";		
+		String contra="root";		
 		String driver="com.mysql.jdbc.Driver";
 		
-		try {
-			
-			PrintWriter out=response.getWriter();
-			
+		try {	
+			PrintWriter out=response.getWriter();		
 			out.print("Nombre de la BBDD: " + jdbcUrl + "<br>");
-			
-			Class.forName(driver);
-			
-			Connection miConexion=DriverManager.getConnection(jdbcUrl, usuario, contra);
-			
-			out.print("CONECTADO!!");
-			
+			Class.forName(driver);		
+			Connection miConexion=DriverManager.getConnection(jdbcUrl, usuario, contra);		
+			out.print("CONECTADO!!");		
 			miConexion.close();
-			
-			
+	
 		}catch(Exception e) {
-			
-			
 			e.printStackTrace();
 		}
-		
 	}
 
 	/**
