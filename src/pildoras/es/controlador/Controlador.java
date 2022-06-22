@@ -57,24 +57,16 @@ public class Controlador {
 		// Enviar al formulario	
 		return "formularioCliente";
 	}
-	/*
+	
 	
 	@GetMapping("/eliminar")
-	public String eliminarCliente(@RequestParam("clienteId") int Id) {
-		
-		
-		// eliminar el cliente
-		
-		clienteDAO.eliminarCliente(Id);
-		
-		
+	public String eliminarCliente(@RequestParam("clienteId") int Id) {	
+		// eliminar el cliente	
+		clienteDAO.eliminarCliente(Id);	
 		// Redireccionar a la lista de clientes
-		
-		
 		return "redirect:/cliente/lista";
-		
 	}
-	*/
+	
 	@Autowired
 	private ClienteDAO clienteDAO;
 
